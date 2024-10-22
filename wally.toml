@@ -1,0 +1,7 @@
+[package]
+name = "azuuu/weave"
+version = "0.1.0-indev"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]

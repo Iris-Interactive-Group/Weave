@@ -5,4 +5,5 @@
 [tools]
 rojo = "rojo-rbx/rojo@7.4.4"
 selene = "Kampfkarren/selene@0.27.1"
-# rojo = "rojo-rbx/rojo@6.2.0"
+Wally = "UpliftGames/Wally@0.3.2"
+# rojo = "rojo-rbx/rojo@6.2.0"''
