@@ -1,0 +1,14 @@
+# Server
+- Loader:
+    The loader is the heart of the operations of Weave's server functionality.
+
+    Weave should be loaded as follows: Run builder for preempt features -> Load Weave settings -> Load selected middleware -> Load Data Models -> Load Handlers 
+
+    Within the Loader, there will be a set of tables that will be either External or Internal, these will be accessible using the API. The External table will be availabe to scripts that are not within the Weave Ecosystem where as Internal will only be accessible to Middleware and Handlers.
+
+
+
+    ## TODO:
+    - Run the Builder module script from a server script.
+    - Within the builder:
+        - 

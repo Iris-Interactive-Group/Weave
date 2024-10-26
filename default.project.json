@@ -1,24 +1,6 @@
 {
   "name": "Weave",
   "tree": {
-    "$className": "DataModel",
-
-    "ServerScriptService": {
-      "$className": "ServerScriptService",
-      "$path": "src/WeaveServer"
-    },
-     
-    "ReplicatedStorage": {
-      "$className": "ReplicatedStorage",
-      "$path": "src/WeaveUtils"
-    },
-    
-    "StarterPlayer":{
-      "$className": "StarterPlayer",
-      "StarterPlayerScripts": {
-        "$className": "StarterPlayerScripts",
-        "$path": "src/WeaveClient"
-      }
-    }
+    "$path": "src/Weave"  
   }
 }
