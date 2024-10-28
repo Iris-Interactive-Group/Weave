@@ -1,7 +1,9 @@
 [package]
 name = "azuuu/weave"
-version = "0.1.0-indev"
+description = "Weave is a robust and evergrowing backend framework for Roblox."
+version = "0.1.0-Iris"
 registry = "https://github.com/UpliftGames/wally-index"
+authors = ["AzurisDev", "Iris Interactive Tech Team"]
 realm = "shared"
 
 [dependencies]

@@ -1,12 +1,13 @@
 --[[
-
-Weave is a backend framework for Roblox, created by Iris Interactive tech team.
+AzurisDev and Iris Interactive Tech Team
+28/10/2024
 
 Use this script to access the different Weave components. 
+
 ]]
 
-return {
-    Server = script.WeaveServer, 
+return table.freeze {
+    Server = require(script.WeaveServer), 
     Client = script.WeaveClient,
     Utils = script.WeaveUtils
 }

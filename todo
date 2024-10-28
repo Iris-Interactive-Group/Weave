@@ -1,14 +1,32 @@
-# Server
-- Loader:
-    The loader is the heart of the operations of Weave's server functionality.
+# Server:
+Server version of Weave will require the player to call the StartServer function within a player join event. This is where the main 
 
-    Weave should be loaded as follows: Run builder for preempt features -> Load Weave settings -> Load selected middleware -> Load Data Models -> Load Handlers 
-
-    Within the Loader, there will be a set of tables that will be either External or Internal, these will be accessible using the API. The External table will be availabe to scripts that are not within the Weave Ecosystem where as Internal will only be accessible to Middleware and Handlers.
+Weave should be loaded as follows: Run builder for preempt features -> Load Weave settings -> Load selected middleware -> Load Handlers -> Load Data Models. Data models that are linked within handlers will be the first to be loaded.
 
 
 
     ## TODO:
-    - Run the Builder module script from a server script.
-    - Within the builder:
-        - 
+    Create StartServer function []:
+        - Load and store settings from the settings module script
+        - Build the Weave folder within Replicated Storage:
+            - Server Events:
+                - ServerStarted
+                - GetHandler
+                - GetModel
+            - Remote Events
+                - ServerStarted
+        - Check through enabled middleware within settings and load middleware, separate runnable from api middleware.
+        - Run runnable middleware
+        - Expose middleware functions
+        - Run the Setup function from settings.
+        - Load handlers and attached data models
+        - Load remaining data models
+        - Run the Execute() function from Handlers if it exists
+        - Expose handler functions via the API
+        - Fire the ServerStarted
+
+    Create GetHandler function []:
+        
+    Create GetModel function []:
+
+    Create GetMiddleware function []:
