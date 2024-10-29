@@ -1,0 +1,3 @@
+local modelTemplate = {}
+
+return modelTemplate

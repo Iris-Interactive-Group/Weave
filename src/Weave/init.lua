@@ -6,6 +6,21 @@ Use this script to access the different Weave components.
 
 ]]
 
+-- Types
+
+-- Middleware type
+export type Middleware = {
+    NAME: string,
+    _VERSION: string,
+    _AUTHOR: string,
+    _COMPATIBLE_VERSION: string,
+    [string]: (any) -> any
+}
+
+
+
+
+----------------------------------------------
 return table.freeze {
     Server = require(script.WeaveServer), 
     Client = script.WeaveClient,
