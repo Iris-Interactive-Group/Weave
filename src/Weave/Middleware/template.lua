@@ -14,7 +14,7 @@ API middleware are a type of middleware that will only provide additional functi
 ]]
 
 local middlewareTemplate = {
-    NAME = "template",
+    _NAME = "template",
     _VERSION = "0.1.0", -- Version of middleware
     _AUTHOR = "Azuris", -- Author of middleware
     _COMPATIBLE_VERSION = "0.1.0" or "Iris", -- Version of Weave compatible with middleware, for direct version use string 1 for broad use sting 2.
@@ -27,16 +27,16 @@ local middlewareTemplate = {
 
     ----------------------------
 }
-middlewareTemplate._index = middlewareTemplate
+middlewareTemplate._index = middlewareTemplate -- Useful for OOP, this is not necessary
 
 -- Add as many functions as desired.
 function middlewareTemplate.someFunction()
     
 end
 
-function middlewareTemplate.Execute()
-    -- This function will be executed by the builder, including this function will declare the middleware as runnable otherwise this middleware will be treated as API.
-end
+-- function middlewareTemplate.Execute()
+--     -- This function will be executed by the builder, including this function will declare the middleware as runnable otherwise this middleware will be treated as API.
+-- end
 
 
 return middlewareTemplate

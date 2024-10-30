@@ -17,6 +17,10 @@ export type Middleware = {
     [string]: (any) -> any
 }
 
+export type Model  = {
+    persistant: boolean,
+    [string]: any
+}
 
 
 
@@ -26,4 +30,5 @@ return table.freeze {
     Client = script.WeaveClient,
     Utils = script.WeaveUtils
 }
+
 
