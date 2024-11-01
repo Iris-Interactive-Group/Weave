@@ -11,9 +11,10 @@ Use this script to access the different Weave components.
 -- Middleware type
 export type Middleware = {
     NAME: string,
-    _VERSION: string,
-    _AUTHOR: string,
-    _COMPATIBLE_VERSION: string,
+    VERSION: string,
+    AUTHOR: string,
+    COMPATIBLE_VERSION: string,
+    REALM: string,
     [string]: (any) -> any
 }
 
@@ -22,6 +23,16 @@ export type Model  = {
     [string]: any
 }
 
+export type Handler = {
+    NAME: string,
+    extends: {
+        [string]: Model
+    },
+    middleware: {
+        [string]: Middleware
+    },
+    [string]: (any) -> any
+}
 
 
 ----------------------------------------------

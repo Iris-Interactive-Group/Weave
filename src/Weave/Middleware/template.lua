@@ -12,13 +12,14 @@ To define a middleware as runnable, create a Execute() function
 API middleware are a type of middleware that will only provide additional functions that will be exposed to selected handlers.
 
 ]]
+local Weave = script.Parent.Parent
 
-local middlewareTemplate = {
-    _NAME = "template",
-    _VERSION = "0.1.0", -- Version of middleware
-    _AUTHOR = "Azuris", -- Author of middleware
-    _COMPATIBLE_VERSION = "0.1.0" or "Iris", -- Version of Weave compatible with middleware, for direct version use string 1 for broad use sting 2.
-
+local middlewareTemplate: Weave.Middleware = {
+    NAME = "template",
+    VERSION = "0.1.0", -- Version of middleware
+    AUTHOR = "Azuris", -- Author of middleware
+    COMPATIBLE_VERSION = "0.1.0" or "Iris", -- Version of Weave compatible with middleware, for direct version use string 1 for broad use sting 2.
+    REALM = "Server" or "Client", -- Server or Client realm
     ----------------------------
 
     settings = {
