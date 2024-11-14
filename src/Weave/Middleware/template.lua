@@ -28,7 +28,7 @@ local middlewareTemplate: Weave.Middleware = {
 
     ----------------------------
 }
-middlewareTemplate._index = middlewareTemplate -- Useful for OOP, this is not necessary
+middlewareTemplate.__index = middlewareTemplate -- Useful for OOP, this is not necessary
 
 -- Add as many functions as desired.
 function middlewareTemplate.someFunction()

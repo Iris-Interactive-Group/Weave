@@ -1,0 +1,12 @@
+{
+    "Latest": {
+        "Version": "0.1.0",
+        "VersionFamily": "Iris",
+        "BuildType": "dev"
+    },
+    "Stable": {
+        "Version": "None",
+        "VersionFamily": "None",
+        "BuildType": "None"
+    }
+}

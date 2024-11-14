@@ -23,7 +23,7 @@ local handlerTemplate = {
         someMiddleware = {},
     }
 }
-handlerTemplate._index = handlerTemplate -- Useful for OOP, this is not necessary
+handlerTemplate.__index = handlerTemplate -- Useful for OOP, this is not necessary
 
 -- Add as many functions as desired.
 function handlerTemplate.someFunction()

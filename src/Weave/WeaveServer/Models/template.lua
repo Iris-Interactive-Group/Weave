@@ -9,7 +9,9 @@ Models provide base data if no present data exist. Models also lay the foundatio
 Functions are not permitted to be defined within models, they will be removed during execution.
 ]]
 
-local modelTemplate: Model = {
+local Weave = script.Parent.Parent.Parent
+
+local modelTemplate: Weave.Model  = {
     persistant = true -- Determines if the data will be saveable, when set to false data will be cleared when player leaves
 }
 
