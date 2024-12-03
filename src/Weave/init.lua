@@ -37,9 +37,9 @@ export type Handler = {
 
 ----------------------------------------------
 return table.freeze {
-    Server = script.WeaveServer, 
-    Client = script.WeaveClient,
-    Utils = script.WeaveUtils
+    Server = require(script.WeaveServer), 
+    Client = require(script.WeaveClient),
+    Utils = require(script.WeaveUtils)
 }
 
 
