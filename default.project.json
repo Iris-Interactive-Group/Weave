@@ -1,6 +1,14 @@
 {
   "name": "Weave",
   "tree": {
-    "$path": "src/Weave"  
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$path": "src/",
+      
+      "Packages": {
+        "$path": "Packages/"
+        
+      }
+    }
   }
 }
