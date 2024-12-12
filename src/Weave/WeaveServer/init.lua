@@ -6,6 +6,9 @@ local ServerScript = game:GetService("ServerScriptService")
 local WEAVE = script.Parent -- The Weave module script
 local Utils = require(WEAVE.WeaveUtils)
 
+-- Packages
+local promise = Utils.findPackage("promise")
+
 local Weave = {}
 Weave.__index = Weave 
 
@@ -65,18 +68,19 @@ function Weave.StartServer(player: Player): any
     self.serverEvents = serverEvents
     self.remoteEvents = remoteEvents
 
+    -- Store all enabled middleware within this table, this will be stored for the current instance
     self.middleware = {
       runnable = {},
       api = {}
     }
 
-    -- Load middleware
+    -- Load middleware and push them into their correct table
     for middlewareName, middleware in pairs(settings.middleware) do
         if middleware then
           if WEAVE.Middleware[middlewareName] then
             local middlewareModule = require(WEAVE.Middleware[middlewareName])
 
-            if middlewareModule.Execute then
+            if middlewareModule["Execute"] or middlewareModule["execute"] then
               self.middleware.runnable[middlewareName] = middlewareModule
             else 
               self.middleware.api[middlewareName] = middlewareModule
@@ -87,7 +91,8 @@ function Weave.StartServer(player: Player): any
         end
     end
 
-  
+    -- Run runnable middleware 
+
 
     return self
 end

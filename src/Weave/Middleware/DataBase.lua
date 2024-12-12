@@ -33,7 +33,7 @@ function DatabaseMiddleware.new(_, dataBaseName: string)
 
     local self = setmetatable({}, DatabaseMiddleware) 
 
-    local ProfileStore = Utils.findPackage("profilestore", "ServerScriptService") -- Import profile service
+    local ProfileStore = Utils.findPackage("profilestore") -- Import profile service
     self.compositeName = "" -- Use this for database name
 
     do 
